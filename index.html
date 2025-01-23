@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwindcss Kanalkoding Landing Page</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <script src="./public/js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/public/img/djk.ico">
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+    <header class="sticky top-0 z-10 bg-teal-700 text-white">
+      <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <h1 class="text-3xl font-medium">
+          <a href="#hero"> Kanal Koding </a>
+        </h1>
+        <div>
+          <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+            <!-- &#9776; -->
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
+            </div>
+          </button>
+          <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
+            <a href="#home" class="hover:opacity-90">Home</a>
+            <a href="#profil" class="hover:opacity-90">Profil</a>
+            <a href="#produk" class="hover:opacity-90">Produk</a>
+            <a href="#testimoni" class="hover:opacity-90">Testimoni</a>
+            <a href="#kontak" class="hover:opacity-90">Kontak</a>
+          </nav>
+        </div>
+      </section>
+      <section id="mobile-menu"
+        class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
+        <!-- <button class="text-8xl self-end px-6">
+                  &times;
+              </button> -->
+        <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Hero</a>
+          <a href="#home" class="w-full py-6 text-center hover:opacity-90">Home</a>
+          <a href="#profil" class="w-full py-6 text-center hover:opacity-90">Profil</a>
+          <a href="#produk" class="w-full py-6 text-center hover:opacity-90">Produk</a>
+          <a href="#testimoni" class="w-full py-6 text-center hover:opacity-90">Testimoni</a>
+          <a href="#kontak" class="w-full py-6 text-center hover:opacity-90">Kontak</a>
+          <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Footer</a>
+        </nav>
+      </section>
+    </header>
+    <main class="mx-auto max-w-4xl">
+      <section id="hero"
+        class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
+        <article class="sm:w-1/2">
+          <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+            We Boldy Go
+            <span class="text-indigo-700 dark:text-indigo-300">Where No Rocket</span>
+            Has Gone Before...
+          </h2>
+          <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+            We're building rockets for the next century today. From the moon to
+            Mars, Jupiter and beyond...
+          </p>
+          <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+            Think Acme Rockets.
+          </p>
+        </article>
+        <img class="w-1/2" src="./public/img/rocketdab.png" alt="Rocket Dab" />
+      </section>
+  
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+  
+      <section id="home" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+          Home
+        </h2>
+        <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/rocketman.png" alt="Explorer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Explorer
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Affordable Exploration
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/rocketride.png" alt="Adventurer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Adventurer
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Best Selling Rocket!
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/rocketlaunch.png" alt="Infinity" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Infinity
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Luxury Starship
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- profil -->
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+  
+      <section id="profil" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+          Profil
+        </h2>
+        <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/wa.png" alt="Explorer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Whatsapp
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Aplikasi Chating masa kini
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/tele.png" alt="Adventurer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Telegram
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Aplikasi Chating telegram yang bagus
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/fb.png" alt="Infinity" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Facebook
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Sosial media Facebook sangat populer
+            </p>
+          </li>
+        </ul>
+        <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+          <li
+          class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+          <img src="./public/img/twitter.png" alt="Infinity" class="mb-6 w-1/2" />
+          <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+            Twitter
+          </h3>
+          <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+            $$$
+          </p>
+          <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+            Sosial media twitter ini sangat terkenal dari anak muda sampai orang tua dan kalangan pejabat
+          </p>
+        </li>
+        <li
+        class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+        <img src="./public/img/tiktok.png" alt="Infinity" class="mb-6 w-1/2" />
+        <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+          Tiktok
+        </h3>
+        <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+          $$$
+        </p>
+        <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+          Sosial media tiktor ini juga banyak diminati kalangan gen Z
+        </p>
+      </li>
+      <li
+      class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+      <img src="./public/img/instagram.png" alt="Infinity" class="mb-6 w-1/2" />
+      <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+        Instagram
+      </h3>
+      <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+        $$$
+      </p>
+      <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+        Sosial media telegram untuk anak muda
+      </p>
+    </li>
+        </ul>
+      </section>
+
+      <!-- produk -->
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+  
+      <section id="produk" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+          Produk
+        </h2>
+        <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/html5.png" alt="Explorer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              HTML5
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              HTML berfungsi sebagai kerangka halaman website
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/css3.png" alt="Adventurer" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              CSS3
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              CSS3 sebagai style untuk mempercantik halaman website
+            </p>
+          </li>
+          <li
+            class="flex w-2/3 flex-col items-center rounded-3xl border border-solid border-slate-900 bg-white py-6 px-2 shadow-xl dark:border-gray-100 dark:bg-black sm:w-5/6">
+            <img src="./public/img/javascript.png" alt="Infinity" class="mb-6 w-1/2" />
+            <h3 class="text-center text-3xl text-slate-900 dark:text-white">
+              Javascript
+            </h3>
+            <p class="mt-2 hidden text-center text-3xl text-slate-500 dark:text-slate-400 sm:block">
+              $$$
+            </p>
+            <p class="mt-2 text-center text-2xl text-slate-500 dark:text-slate-400 sm:hidden">
+              Javascript berfungsi untuk membuat website berinteraksi lebih aktif
+            </p>
+          </li>
+        </ul>
+      </section>
+  
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+  
+      <section id="testimoni"
+        class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+          Testimoni
+        </h2>
+        <figure class="my-12">
+          <blockquote class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black">
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
+              Acme has always been there for me. Their Explorer rocket arrived
+              in a wooden crate as expected. Life-long customer! A++ shopping
+              experience.
+            </p>
+          </blockquote>
+          <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
+            &#8212;Wile E. Coyote, Genius
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black">
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
+              The Acme Adventurer Rocket has thwarted my Illudium Q-36 Explosive
+              Space Modulator on several occassions.
+              <span class="italic">This makes me very, very angry!</span>
+              Nevertheless, K-9 and I have awarded Acme the Martian contract for
+              space exploration rockets based on Acme's quality and sturdy
+              designs.
+            </p>
+          </blockquote>
+          <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
+            &#8212;Marvin The Martian &amp; K-9
+          </figcaption>
+        </figure>
+        <figure class="my-12">
+          <blockquote class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black">
+            <p
+              class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl">
+              I knew I not only wanted &#8212;
+              <span class="italic">I needed</span> &#8212; Acme's Infinity
+              Rocket for my mission in space. Acme delivered in one day! Nothing
+              says <q class="italic">Take me to your leader</q> like Acme's
+              Infinity Rocket! 💯
+            </p>
+          </blockquote>
+          <figcaption class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl">
+            &#8212;Buzz Lightyear
+          </figcaption>
+        </figure>
+      </section>
+  
+      <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+  
+      <section id="kontak" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
+        <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+          Kontak
+        </h2>
+        <form action="" class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl">
+          <label for="subject">Nama:</label>
+          <input type="text" id="nama" name="nama" required minlength="3" maxlength="60" placeholder="Masukan Nama Anda"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl" />
+            <label for="subject">No HP:</label>
+          <input type="number" id="number" name="number" required minlength="9" maxlength="14" placeholder="Masukan Nomer HP Anda"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl" />
+            <label for="subject">Email:</label>
+          <input type="email" id="email" name="email" required minlength="10" maxlength="60" placeholder="Masukan Email Anda"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl" />
+          <label for="message">Pesan:</label>
+          <textarea name="pesan" id="pesan" cols="30" rows="10" placeholder="Masukan Pesan Anda" required
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"></textarea>
+          <button
+            class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none">
+            Kirim
+          </button>
+        </form>
+      </section>
+    </main>
+  
+    <footer id="footer" class="bg-teal-700 text-xl text-white">
+      <section class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between">
+        <address>
+          <h2>Darsa Jaya Komputer</h2>
+          Dusun 03 Sanggar Buana<br />Seputih Banyak
+          <br/>
+          Lampung Tengah<br />
+          Email:
+          <a href="mailto:inquiries@acmerockets.com">kanalkoding@gmail.com</a><br />
+          Phone Number: <a href="tel:+15555555555">(+62)852-1300-7480</a>
+        </address>
+        <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
+          <a href="#home" class="hover:opacity-90">Home</a>
+          <a href="#profil" class="hover:opacity-90">Profil</a>
+          <a href="#produk" class="hover:opacity-90">Produk</a>
+          <a href="#testimoni" class="hover:opacity-90">Testimoni</a>
+          <a href="#kontak" class="hover:opacity-90">Kontak</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
+          <p class="text-right">Kanal Koding</p>
+          <p class="text-right">All Rights Reserved</p>
+
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

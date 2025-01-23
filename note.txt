@@ -1,0 +1,119 @@
+cara instalasi tailwindcss dari awal dengan CLI
+
+pertama inisialisasi NPM
+- npm init -y
+
+kedua install tailwindcss atau uninstall tailwindcss
+-npm install -D tailwindcss / npm uninstall tailwindcss
+
+ketiga instalasi tailwindcss, postcss dan autoprefixer
+-npm install -D tailwindcss postcss autoprefixer
+
+keempat inisialisasi tailwindcss
+-npx tailwindcss init
+
+kelima menjalankan tailwindcss
+-npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+
+-npm run build
+
+untuk memunculkan auto complate = tekan ctrl + spasi
+
+Tailwind CSS merupakan framework CSS yang berbasis utility untuk membuat UI atau tampilan dari aplikasi web.
+
+Berbasis utility artinya Tailwind cuma terdiri dari 100% utility class dan nggak ada class komponen seperti Navbar, Button, Card, Modal, dll. Komponen-komponen ini kita buat sendiri dengan class utility.
+
+instalasi
+mkdir belajar-tailwind
+cd belajar-tailwind
+npm init -y 
+npm install tailwindcss
+npx tailwindcss init
+
+Kemudian, kita akan melakukan konfigurasi path konten pada file tailwind.config.js.
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+Artinya saat kita melakukan build CSS, si Tailwind akan mencari class-class apa saja yang dipakai di file HTML dan JS pada path tersebut.
+
+Setelah itu, buat folder baru dengan nama src di dalam project. Kemudian buat file CSS baru di dalam src dengan nama input.css dan isi seperti ini:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+Selanjutnya buatlah file index.html di dalam folder src untuk menggunakan class-class dari Tailwind.
+
+Isi file index.html seperti ini:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css"/>
+    <title>Project Tailwind dengan NPM</title>
+</head>
+<body>
+  <h1 class="text-3xl font-bold text-teal-700">Petani Kode</h1>
+</body>
+</html>
+Perhatikan link CSS di HTML ini 👆. Kita menulisnya seperti ini:
+
+/dist/output.css
+Karena kita akan buka di Live server atau localhost. Jika kamu mau langsung buka tanpa live server, cukup tuliskan seperti ini tanpa /
+
+../dist/output.css
+Tanda ../ artinya kita mau akses file CSS yang berada di parent direktori.
+
+Ini karena kita menyimpan file HTML-nya di dalam folder src.
+
+O iya, file dist/output.css ini belum ada. File ini akan dibuat otomatis oleh Tailwind.
+
+Caranya:
+
+Jalankan perintah berikut:
+
+npx tailwindcss -i src/input.css -o dist/output.css
+Perintah ini 👆 bertujuan untuk membuat file CSS (output.css) berdasarkan class-class yang dipakai pada path konten (index.html).
+
+Jika kamu ingin hasil build-nya di-optimasi (minify), gunakan opsi --minify di belakangnya.
+
+Contoh:
+
+npx tailwindcss -i src/input.css -o dist/output.css --minify
+
+Hasil build yang minify ini cocok dipakai di production, karena ukurannya lebih kecil dan sudah dioptimasi.
+
+Ini karena kita menuliskan di href dengan /dist, seharusnya ../dist/ biar dia membaca folder dist.
+
+Coba ubah /dist/ menjadi ../dist/.
+
+<link rel="stylesheet" href="../dist/output.css" />
+
+Silakan buka file package.json, lalu di bagian "scripts" buat menjadi seperti ini:
+
+package.json
+{
+  "name": "belajar-tailwind",
+  "version": "1.0.0",
+  "description": "belajar tailwind",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i src/input.css -o dist/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
+
